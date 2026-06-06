@@ -9,7 +9,6 @@ function NoteList({ notes , deleteNote ,editNote})  {
 
   return (
     <div className={listClass}>
-
       {notes.map((note,index) => (
         <div
           className="note-item"
@@ -17,11 +16,9 @@ function NoteList({ notes , deleteNote ,editNote})  {
           style={{'--note-index': index}}
         >
             <h3>{note.text}</h3>
-            {/* <h2>Total Notes : {notes.length}</h2> */}
             <NoteCard note={note} deleteNote={deleteNote} editNote={editNote} />
         </div>
       ))}
-
     </div>
   );
 }
